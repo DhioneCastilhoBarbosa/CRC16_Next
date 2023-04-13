@@ -12,7 +12,7 @@ const [valor,setValor] = useState('');
 
 const handleChange = (event: any)=>{
   
-  setValor(event.target.value);
+  setValor((event.target.value).toUpperCase());
   
 }
 
