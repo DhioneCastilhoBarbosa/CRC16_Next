@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Inter } from 'next/font/google'
 import { crc16 } from 'easy-crc'
-import Link from 'next/link'
+import Menu from './components/menu'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -36,26 +37,19 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between ">
 
       <header className='w-full  bg-blue-700'>
-        <div className='flex flex-row items-center justify-between px-4 py-2'>
+        <div className='flex flex-row items-center justify-between pl-2 pr-1 md:py-2 md:px-4'>
           <p className='text-white font-bold text-xl'>Convert</p>
 
-          <div className='flex flex-row items-center justify-between ml-2 px-2 text-white '>
-            <Link className='mr-6  hover:text-cyan-300 duration-700' href="/">
-              Decodificar
-            </Link>
-            <Link  className='hover:text-cyan-300 duration-700' href="/hexpage">
-            Converter
-            </Link>
-          </div>
+          <Menu/>
 
         </div>
       </header>
 
-      <div className='flex flex-col  bg-blue-400 px-24 pb-24 pt-4 rounded-2xl shadow-2xl shadow-gray-600 items-center'>
-        <p className='mb-16 mt-4 font-bold text-xl text-white'>Insira o código para decodificação</p>
-        <div>
-          <input className='w-72 p-1 rounded-lg text-center border-2 border-blue-400 focus:outline-none' type="text" onChange={handleChange} />
-          <button className=' ml-2  px-4 py-1 bg-blue-600 rounded-lg text-white font-bold hover:bg-blue-800 duration-700' onClick={handleClick}>Enviar</button>
+      <div className='flex flex-col  bg-blue-400 px-24 pb-24 pt-4 rounded-2xl shadow-2xl shadow-gray-600 items-center w-3/4 md:w-auto'>
+        <p className='mb-16 mt-4 font-bold  text-sm md:text-xl text-white whitespace-nowrap'>Insira o código para decodificação</p>
+        <div className='flex flex-row items-center justify-center flex-wrap md:flex-nowrap gap-4'>
+          <input className=' w-64 md:w-72 p-1 rounded-lg text-center border-2 border-blue-400 focus:outline-none' type="text" onChange={handleChange} />
+          <button className=' w-60 md:w-auto px-4 py-1 bg-blue-600 rounded-lg text-white font-bold hover:bg-blue-800 duration-700' onClick={handleClick}>Enviar</button>
         </div>
 
         <p className=' mt-8 font-bold text-xl text-white' >{valor === 'FFFF' ? "" : codigo}</p>
