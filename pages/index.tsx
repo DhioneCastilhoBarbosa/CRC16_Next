@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Inter } from 'next/font/google'
 import { crc16 } from 'easy-crc'
-import Menu from './components/menu'
+import NewMenu from './components/menu'
+
 
 
 
@@ -40,7 +41,7 @@ export default function Home() {
         <div className='flex flex-row items-center justify-between pl-2 pr-1 md:py-2 md:px-4'>
           <p className='text-white font-bold text-xl'>Convert</p>
 
-          <Menu/>
+          <NewMenu/>
 
         </div>
       </header>

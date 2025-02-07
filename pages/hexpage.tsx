@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Menu from './components/menu';
+import NewMenu from './components/menu';
+
 
 
 export default function HexConvert() {
@@ -40,7 +41,7 @@ export default function HexConvert() {
         <div className='flex flex-row items-center justify-between pl-2 pr-1 md:py-2 md:px-4'>
           <p className='flex flex-row items-center justify-center text-white font-bold text-xl'> Convert</p>
 
-          <Menu/>
+         <NewMenu/>
 
         </div>
       </header>
