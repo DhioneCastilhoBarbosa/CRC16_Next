@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import NewMenu from './components/menu';
-
+import NewMenu from './components/newMenu';
 
 
 export default function HexConvert() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Inter } from 'next/font/google'
 import { crc16 } from 'easy-crc'
-import NewMenu from './components/menu'
+import NewMenu from './components/newMenu'
 
 
 
